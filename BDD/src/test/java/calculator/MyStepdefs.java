@@ -7,7 +7,7 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 
 public class MyStepdefs {
-    private Calculator calculator;
+    private calculator.Calculator calculator;
     private int value1;
     private int value2;
     private int result;
@@ -17,7 +17,7 @@ public class MyStepdefs {
         calculator = new Calculator();
     }
 
-    @Given("^Two input values, (\\d+) and (\\d+)$")
+    @Given("^Two input values, (-?[1-9]\\d*|0) and (-?[1-9]\\d*|0)$")
     public void twoInputValuesAnd(int arg0, int arg1) {
         value1 = arg0;
         value2 = arg1;
